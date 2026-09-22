@@ -19,14 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-NOTE ON SCOPE
-
-This license covers the code and documentation in this repository, and the
-trained model weights included in it.
-
-It does NOT cover, and cannot grant you any rights to, the Liu Cixin source
-text used to train the model. That text is not part of this repository and
-must not be redistributed with it.
