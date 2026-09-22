@@ -1,5 +1,7 @@
 # 《他只读过宇宙》
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > *He Only Ever Read Space* — a 3.5M-parameter language model that has only ever
 > read Liu Cixin, sealed inside an ESP32-S3 with no input, no network and no way
 > out, forever narrating its own captivity onto a 128×64 OLED and then wiping
@@ -221,5 +223,9 @@ pio run -e esp32-s3-devkitc-1 -t upload
 
 ## 许可
 
-本仓库是个人艺术项目。代码可自由参考；**刘慈欣作品的文本不包含在内，也不得由本项目
-再分发**。
+[MIT](LICENSE) —— **想怎么用就怎么用**，改、卖、闭源、二次创作都行，只要保留版权署名。
+
+这包括仓库里**训练好的模型权重**。
+
+唯一的例外是**训练语料**：刘慈欣作品的原文不属于本仓库，MIT 也不能授予你任何与它
+有关的权利。原文不在这里，也不要跟着本仓库一起分发。
