@@ -1,0 +1,61 @@
+# ===========================================================================
+#  What is deliberately NOT in this repository, and why
+# ===========================================================================
+#
+# 1. THE CORPUS.  txt/ and data/corpus.txt are Liu Cixin's complete works in
+#    plain text. They are copyrighted. Redistributing them here would be
+#    wrong, and a repository that ships them gets taken down. Supply your own
+#    legally obtained copies and rebuild with scripts/build_corpus.py and
+#    scripts/prepare_data.py (see README).
+#
+# 2. THINGS THAT ARE LARGE.  downloads/ is a 2.5 GB offline torch wheel,
+#    ref/ is a third-party reference clone, and llama2.c/out_*/ holds training
+#    checkpoints. GitHub hard-rejects any single file over 100 MB, and none of
+#    this is needed to build the firmware.
+#
+# 3. THINGS THE BUILD REGENERATES.  .pio/, __pycache__/.
+#
+# 4. DEBUG RESIDUE.  The root *.log files are captured serial output from
+#    hardware bring-up. Interesting once, noise forever.
+#
+# Everything excluded here is rebuildable; the README says how.
+# ===========================================================================
+
+# --- PlatformIO / Python build output ---------------------------------------
+.pio/
+__pycache__/
+*.py[cod]
+
+# --- editor state -----------------------------------------------------------
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch
+
+# --- corpus: copyrighted, must not be redistributed -------------------------
+txt/
+data/corpus.txt
+data/tok8192/
+
+# --- large / third-party ----------------------------------------------------
+downloads/
+ref/
+
+# --- training output: 10-100 MB checkpoints and fp32 blobs ------------------
+llama2.c/out_liucixin/
+llama2.c/out_liucixin_v2/
+
+# --- intermediate quantization blobs ---------------------------------------
+# llama2.c/model_esp_v2.bin IS committed on purpose: it is the deployed
+# artwork's weights (3.6 MB), so the repo can be flashed without retraining.
+llama2.c/q8_*.bin
+llama2.c/model.bin
+llama2.c/model_esp_smoke.bin
+
+# --- junction into ../data; recreate it with: -------------------------------
+#     cmd /c mklink /J llama2.c\data data
+llama2.c/data
+
+# --- serial capture residue -------------------------------------------------
+*.log
+dl_report.json

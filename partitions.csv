@@ -1,0 +1,9 @@
+# ESP32-S3 16MB partition table (total exactly 0x1000000 = 16MB)
+# Keep comments ASCII: read with system codepage (cp936), UTF-8 comments crash.
+# Name,   Type, SubType, Offset,   Size, Flags
+nvs,      data, nvs,     0x9000,   0x5000,
+otadata,  data, ota,     0xE000,   0x2000,
+app0,     app,  ota_0,   0x10000,  0x280000,
+app1,     app,  ota_1,   0x290000, 0x280000,
+model,    data, spiffs,  0x510000, 0x940000,
+tok,      data, spiffs,  0xE50000, 0x1B0000,

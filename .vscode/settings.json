@@ -1,0 +1,4 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "cmake.sourceDirectory": "E:/工程文件/espllm/ref/tinyllamas-zh-main/esp32s3-demo"
+}
